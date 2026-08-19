@@ -5,9 +5,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared.module';
+import { AuthenticationComponent } from './authentication.component';
 
 @NgModule({
   declarations: [
+    AuthenticationComponent,
     SignupComponent,
     LoginComponent
   ],

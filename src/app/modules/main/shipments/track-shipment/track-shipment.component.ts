@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./track-shipment.component.css']
 })
 export class TrackShipmentComponent {
+ trackShipmentInput:string = '';
+ constructor(){}
 
+ onSubmit(){
+  console.log(this.trackShipmentInput);
+ }
 }

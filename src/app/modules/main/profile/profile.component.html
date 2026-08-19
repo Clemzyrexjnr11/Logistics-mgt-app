@@ -1,1 +1,71 @@
-<p>profile works!</p>
+<section class="w-full h-fit py-2 flex justify-center">
+  <div class="container py-2 flex flex-col w-[60%] h-full items-center">
+   <div class="avatar mb-2">
+            <ngx-avatars
+           name="Clement Eteka"
+          size="100"
+          [round]="true"
+          bgColor="#032042"
+          fgColor="#6da7ec"
+          [textSizeRatio]="3"
+          class="!font-bold !font-secondary"
+        >
+        </ngx-avatars>
+   </div>
+   <div class="user-details flex flex-col">
+    <p class="font-bold font-primary text-[30px] text-white">Clement Eteka</p>
+    <p class="font-normal text-secondary font-font_mono text-[16px]">etekaclement@company.com</p>
+   </div>
+   <!-- <div class="border-[1px] border-border border-b w-full mb-4"></div> -->
+
+
+
+    <div
+    class="h-[450px] w-[500px] rounded-lg text-primary_tint flex flex-col items-center py-4 font-primary"
+  >
+    <form [formGroup]="form" (ngSubmit)="onSubmitForm()" class="w-full px-4 text-white">
+      <div class="flex flex-col gap-2 mb-2">
+        <label for="fullName">Full name</label>
+        <input
+          formControlName="fullName"
+          type="text"
+          class="h-[45px] border-border border-[1px] bg-transparent rounded-lg px-2"
+        />
+      </div>
+      <div class="flex flex-col gap-2 mb-2">
+        <label for="email">Email</label>
+        <input
+          formControlName="email"
+          type="text"
+          class="h-[45px] border-border border-[1px] bg-transparent rounded-lg px-2"
+        />
+      </div>
+      <div class="flex flex-col gap-2 mb-6 relative">
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          formControlName="phoneNumber"
+          type="tel"
+          class="h-[45px] border-border border-[1px] bg-transparent rounded-lg px-2"
+        />
+      </div>
+      <div class="flex flex-col justify-center items-center gap-3">
+        <button
+          class="h-[40px] flex items-center justify-center rounded-lg text-[#151515] bg-primary_tint w-full disabled:opacity-[0.7]"
+          type="submit"
+          [disabled]="!form.valid"
+        >
+          Save Changes
+        </button>
+        <button
+          class="h-[40px] flex items-center justify-center rounded-lg text-[#ec7e7e] bg-transparent w-full border-[1px] border-[#641919]"
+          type="submit"
+          (click)="logOut()"
+        >
+        <mat-icon style="color: #ec7e7e; font-size: 16px;" class="mt-2">logout</mat-icon>
+          Sign out
+        </button>
+      </div>
+    </form>
+  </div>
+  </div>
+</section>

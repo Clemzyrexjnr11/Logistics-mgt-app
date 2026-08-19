@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ShipmentsComponent } from './shipments/shipments.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MainComponent } from './main.component';
+// import { authGuard } from '../controllers/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main',
-    pathMatch: 'full',
-  },
-  {
-    path: 'main',
     component: MainComponent,
+    // canActivate:[authGuard],
     children: [
       {
         path: '',
@@ -27,7 +22,7 @@ const routes: Routes = [
       },
       {
         path: 'shipments',
-        component: ShipmentsComponent,
+        loadChildren:()=> import('./shipments/shipments.module').then((m)=> m.ShipmentsModule)
       },
       {
         path: 'profile',

@@ -1,1 +1,33 @@
-<p>shipments works!</p>
+<!-- <router-outlet></router-outlet> -->
+<section class="w-full h-full">
+    <div class="flex items-center ">
+
+<mat-tab-group
+  animationDuration="150ms"
+  mat-stretch-tabs="false"
+  class="analyze-tabs"
+>
+  <mat-tab label="All">
+    <app-all-shipments></app-all-shipments>
+  </mat-tab>
+  <mat-tab label="Pending">
+    <app-pending-shipments></app-pending-shipments>
+  </mat-tab>
+  <mat-tab label="In transit">
+    <app-intransit-shipments></app-intransit-shipments>
+  </mat-tab>
+  <mat-tab label="Delivered">
+    <app-delivered-shipments></app-delivered-shipments>
+  </mat-tab>
+  <mat-tab label="Cancelled" class="!text-red-700">
+    <app-cancelled-shipments></app-cancelled-shipments>
+  </mat-tab>
+
+  
+</mat-tab-group>
+<!-- <div class="flex "></div> -->
+  <!-- <input type="text"> -->
+
+    </div>
+
+</section>

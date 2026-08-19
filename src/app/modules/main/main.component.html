@@ -8,19 +8,29 @@
         <p class="font-font_display text-[24px]">ShipFast</p>
       </span>
       <div class="nav_link flex items-center gap-4 font-primary">
-        <a routerLink="/app/main/dashboard" routerLinkActive="text-primary_blue"
+        <a routerLink="/app/dashboard" routerLinkActive="text-primary_blue"
           >Dashboard</a
         >
-        <a routerLink="/app/main/shipments" routerLinkActive="text-primary_blue"
+        <a routerLink="/app/shipments" routerLinkActive="text-primary_blue"
           >Shipments</a
         >
-        <a routerLink="/app/main/profile" routerLinkActive="text-primary_blue"
+        <a routerLink="/app/profile" routerLinkActive="text-primary_blue"
           >Profile</a
         >
       </div>
 
       <div class="auth_btn flex gap-4 items-center font-primary">
-        <p>Avatar img: Mock name</p>
+            <ngx-avatars
+           name="Clement Eteka"
+          size="40"
+          [round]="true"
+          bgColor="#032042"
+          fgColor="#6da7ec"
+          [textSizeRatio]="3"
+          class="!font-bold !font-secondary"
+        >
+        </ngx-avatars>
+        <p>Clement Eteka</p>
       </div>
     </nav>
   </header>
