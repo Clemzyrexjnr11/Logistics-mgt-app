@@ -1,0 +1,31 @@
+<section class="main w-[100%] h-[100%]">
+  <header class="w-full h-[10vh]">
+    <nav
+      class="w-full h-full text-white px-[24px] flex items-center justify-between sticky top-0 z-50 shadow-md"
+    >
+      <span class="logo flex items-center gap-2">
+        <mat-icon>local_shipping</mat-icon>
+        <p class="font-font_display text-[24px]">ShipFast</p>
+      </span>
+      <div class="nav_link flex items-center gap-4 font-primary">
+        <a routerLink="/app/main/dashboard" routerLinkActive="text-primary_blue"
+          >Dashboard</a
+        >
+        <a routerLink="/app/main/shipments" routerLinkActive="text-primary_blue"
+          >Shipments</a
+        >
+        <a routerLink="/app/main/profile" routerLinkActive="text-primary_blue"
+          >Profile</a
+        >
+      </div>
+
+      <div class="auth_btn flex gap-4 items-center font-primary">
+        <p>Avatar img: Mock name</p>
+      </div>
+    </nav>
+  </header>
+  <section class="px-[30px] py-[20px]">
+  <router-outlet></router-outlet>
+     
+  </section>
+</section>

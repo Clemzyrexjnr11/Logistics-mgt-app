@@ -1,0 +1,68 @@
+<main>
+    <div class="hero_section h-[70vh] flex flex-col gap-4 items-center justify-center">
+        <span class="px-[50px] font-normal font-primary py-2 rounded-[20px] text-primary_blue bg-[#2563eb1c] mb-4">Now shipping nationwide</span>
+        <h1 class="text-white font-font_mono font-bold text-[40px] text-center max-w-[70vw]">Fast, reliable shipping for your business</h1>
+        <p class="font-font_display text-secondary mb-4">Create, track and manage every shipment from one simple dashboard</p>
+        <div class="hero_btn flex gap-2">
+          <a routerLink="/auth/signup"><button class="text-[#151515] bg-border px-4 py-2 rounded-lg font-primary">Get started</button></a>
+            <a routerLink="/app/trackshipment"><button class="px-4 py-2 border-[1px] border-border rounded-lg text-white font-primary">Track a shipment</button></a>
+        </div>
+    </div>
+
+    <div id="services" class="service_section flex flex-col items-center h-[70vh] !bg-[#000000] px-[40px] py-[40px]">
+         <h2 class="mb-[30px] text-[30px] font-bold font-primary text-primary_tint">What we offer</h2>
+         <div class="service_grid w-full grid grid-cols-3 gap-4 font-primary">
+            <div class=" h-[250px] rounded-lg shadow-md flex flex-col bg-[#151515] p-6 gap-4">
+                <mat-icon style="color: #2563eb;">inventory_2</mat-icon>
+                <p class="font-bold text-[20px] text-primary_tint">Parcel shipping</p>
+                <p class="text-[14px] text-secondary">Door-to-door for packages of any size</p>
+            </div>
+            <div class=" h-[250px] rounded-lg shadow-md flex flex-col bg-[#151515] p-6 gap-4">
+                <mat-icon style="color: #2563eb;">location_on</mat-icon>
+                <p class="font-bold text-[20px] text-primary_tint">Real-time tracking</p>
+                <p class="text-[14px] text-secondary">Live status updates at every stage</p>
+            </div>
+            <div class=" h-[250px] rounded-lg shadow-md flex flex-col bg-[#151515] p-6 gap-4">
+                <mat-icon style="color: #2563eb;">warehouse</mat-icon>
+                <p class="font-bold text-[20px] text-primary_tint">Bulk distribution</p>
+                <p class="text-[14px] text-secondary">Multi-destination runs for businesses</p>
+            </div>
+         </div>
+    </div>
+
+    <div id="about" class="about_section flex flex-col justify-center items-center h-[50vh]">
+        <h3 class="mb-[30px] text-[30px] font-bold font-primary text-primary_tint">About ShipFast</h3>
+        <p class="text-center max-w-[70vw] text-secondary font-font_display">We help small and growing businesses manage shipping without the overhead of enterprise logistics software — create a shipment, hand it off, and let your customers track it every step of the way.</p>
+    </div>
+</main>
+
+<footer class="footer w-full h-fit py-4 flex flex-col items-center bg-black">
+  <div class="footer_link flex gap-5 mb-[30px] w-full justify-around font-primary">
+    <div class="flex flex-col gap-2">
+        <span class="flex gap-2">
+            <mat-icon style="color: white;">local_shipping</mat-icon>
+            <p class="text-white font-font_display text-[20px]">ShipFast</p>
+        </span>
+        <p class="text-secondary text-[16px] font-normal">Shipping made simple.</p>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <span class="text-white text-[20px]">Product</span>
+       <a href="#services"><p class="text-secondary text-[16px] font-normal">Services</p></a>
+       <a routerLink="/app/trackshipment"> <p class="text-secondary text-[16px] font-normal">Track shipment</p></a>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <span class="text-white text-[20px]">Account</span>
+       <a routerLink="/auth/login"><p class="text-secondary text-[16px] font-normal">Log in</p></a>
+      <a routerLink="/auth/signup"><p class="text-secondary text-[16px] font-normal">Sign up</p></a>
+    </div>
+        <div class="flex flex-col gap-2">
+        <span class="text-white text-[20px]">Company</span>
+       <a href="#about"><p class="text-secondary text-[16px] font-normal">About</p></a>
+    </div>
+  </div>
+  <div class="footer_copyright">
+    <p class="text-secondary font-primary"> &copy; 2026 ShipFast. All rights reserved</p>
+  </div>
+</footer>

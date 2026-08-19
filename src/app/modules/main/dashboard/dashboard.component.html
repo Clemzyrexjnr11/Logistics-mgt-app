@@ -1,0 +1,62 @@
+<div class="w-full h-full">
+  <div class="flex justify-between items-ccenter">
+    <p class="text-white font-font_display text-[25px] font-normal">
+      Welcome, Clement
+    </p>
+    <button
+      *ngIf="shipments.length !== 0"
+      class="font-font_display rounded-lg p-2 bg-white flex items-ccenter"
+    >
+      <mat-icon>add</mat-icon>New shipment
+    </button>
+  </div>
+
+  <div class="w-full gap-6 grid grid-cols-3 mt-6">
+    <div
+      class="h-[200px] rounded-lg flex flex-col p-6 bg-[#000000] font-primary"
+    >
+      <p class="metricsText text-secondary text-[20px] font-normal mb-2">
+        In transit
+      </p>
+      <p class="metricsCount text-secondary text-[40px] font-bold">0</p>
+    </div>
+    <div
+      class="h-[200px] rounded-lg flex flex-col p-6 bg-[#000000] font-primary"
+    >
+      <p class="metricsText text-secondary text-[20px] font-normal mb-2">
+        Delivered
+      </p>
+      <p class="metricsCount text-secondary text-[40px] font-bold">0</p>
+    </div>
+    <div
+      class="h-[200px] rounded-lg flex flex-col p-6 bg-[#000000] font-primary"
+    >
+      <p class="metricsText text-secondary text-[20px] font-normal mb-2">
+        Cancelled
+      </p>
+      <p class="metricsCount text-secondary text-[40px] font-bold">0</p>
+    </div>
+  </div>
+
+  <ng-container *ngIf="shipments.length === 0; else shipmentList">
+    <div
+      class="mt-4 rounded-lg h-[70vh] bg-[#000000] border-[2px] border-dotted border-border flex flex-col gap-6 items-center justify-center"
+    >
+      <mat-icon style="color: white">inventory_2</mat-icon>
+      <p class="text-white font-primary text-[20px] font-bold">
+        No shipments yet.
+      </p>
+      <p class="text-secondary font-[16px] font-primary">
+        Create your first shipment to start tracking deliveries.
+      </p>
+
+      <button
+        class="font-font_display rounded-lg p-2 bg-white flex items-ccenter"
+      >
+        <mat-icon>add</mat-icon>New shipment
+      </button>
+    </div>
+  </ng-container>
+
+  <ng-template #shipmentList></ng-template>
+</div>

@@ -1,0 +1,21 @@
+<section class="main w-[100%] h-[100%]">
+<header class="w-full h-[10vh]">
+    <nav class="w-full h-full text-white px-[24px] flex items-center justify-around sticky top-0 z-50 shadow-md">
+        <span class="logo flex items-center gap-2">
+           <mat-icon>local_shipping</mat-icon>
+           <p class="font-font_display text-[24px] ">ShipFast</p>
+        </span>
+        <div class="nav_link flex items-center gap-4 font-primary">
+            <a routerLink="/home" fragment="services" class="text-primary_blue hover:text-white hover:border-1 hover:border-b border-primary_blue">Services</a>
+            <a routerLink="track-shipment" class=" hover:border-1 hover:border-b border-primary_blue">Track shipment</a>
+            <a routerLink="/home" fragment="about" class="text-primary_blue hover:text-white hover:border-1 hover:border-b border-primary_blue">About</a>
+        </div>
+
+        <div class="auth_btn flex gap-4 items-center">
+           <a routerLink="/auth/login"><button class="px-4 py-2 border-[1px] border-border rounded-lg">Log in</button></a>
+            <a routerLink="/auth/signup"><button class="text-[#151515] bg-border px-4 py-2 rounded-lg">Sign up</button></a>
+        </div>
+    </nav>
+</header>
+ <router-outlet></router-outlet>
+</section>
