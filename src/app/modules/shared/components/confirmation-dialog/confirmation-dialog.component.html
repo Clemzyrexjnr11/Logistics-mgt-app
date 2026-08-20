@@ -1,0 +1,9 @@
+<div class="bg-white font-primary !rounded-lg flex flex-col p-6">
+  <h2 class="font-bold text-[14px] mb-4">{{dialogData.title}}</h2>
+  <p class="mb-4">{{dialogData.message}}</p>
+  <div class="flex self-end gap-2 ">
+  <button (click)="onConfirm()" class="text-white px-8 py-2 h-fit w-fit rounded-lg outline-none border-none bg-primary_blue font-bold">Yes</button>
+  <button (click)="onCancel()" class="px-8 py-2 h-fit w-fit rounded-lg border-[1px] font-bold" >No</button>
+  </div>
+
+</div>

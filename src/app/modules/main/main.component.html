@@ -21,7 +21,7 @@
 
       <div class="auth_btn flex gap-4 items-center font-primary">
             <ngx-avatars
-           name="Clement Eteka"
+           [name]="userName"
           size="40"
           [round]="true"
           bgColor="#032042"
@@ -30,7 +30,7 @@
           class="!font-bold !font-secondary"
         >
         </ngx-avatars>
-        <p>Clement Eteka</p>
+        <p>{{userName}}</p>
       </div>
     </nav>
   </header>

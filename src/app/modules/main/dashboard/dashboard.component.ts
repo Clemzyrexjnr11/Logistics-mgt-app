@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from '../../controllers/services/authentication.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
  shipments = [];
+ userName!:string
+ constructor(private authService:AuthenticationService){
+   this.userName = this.authService.userName.split(" ")[0];
+ }
 }

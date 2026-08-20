@@ -26,10 +26,14 @@ export class AuthenticationService {
   }
 
   get userName(){
-    return this.user.username;
+    return this.user.fullname;
   }
   get userEmail(){
     return this.user.email;
+  }
+
+  get userPhoneNumber(){
+    return this.user.phonenumber
   }
 
   signUp(request: any) {
