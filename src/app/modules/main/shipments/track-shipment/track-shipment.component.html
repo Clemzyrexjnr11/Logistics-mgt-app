@@ -12,14 +12,16 @@
           type="text"
           class="w-[80%] text-white rounded-lg bg-transparent border-[1px] border-border px-2"
           placeholder="e.g #SF012"
-          name="trackShipmentInput"
-          [(ngModel)]="trackShipmentInput"
+          name="ShipmentId"
+          [(ngModel)]="ShipmentId"
         />
         <button
           class="w-[20%] p-2 bg-white rounded-lg disabled:opacity-[0.7]"
-          [disabled]="!trackShipmentInput"
+          [disabled]="!ShipmentId"
+          type="submit"
         >
-          Track
+        <mat-spinner diameter="20" *ngIf="isLoading" class=" mx-auto"></mat-spinner>
+          <span *ngIf="!isLoading">Track</span>
         </button>
       </div>
     </form>
