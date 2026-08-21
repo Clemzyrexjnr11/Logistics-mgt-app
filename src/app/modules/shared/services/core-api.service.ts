@@ -47,4 +47,10 @@ export class CoreApiService {
       newPassword,
     });
   }
+  createShipment(request:any) {
+    return this.http.post<ApiResponse>(`${this.rootServiceUrl}api/shipments/create-shipment`, request);
+  }
+  getDashboardMetrics() {
+    return this.http.get<ApiResponse>(`${this.rootServiceUrl}api/shipments/dashboard-metrics`);
+  }
 }

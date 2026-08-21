@@ -10,6 +10,7 @@ import { DeliveredShipmentsComponent } from './delivered-shipments/delivered-shi
 import { CancelledShipmentsComponent } from './cancelled-shipments/cancelled-shipments.component';
 import { ShipmentsRoutingModule } from './shipments-routing.module';
 import { ShipmentsComponent } from './shipments.component';
+import { NewShipmentComponent } from './new-shipment/new-shipment.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ShipmentsComponent } from './shipments.component';
     PendingShipmentsComponent,
     DeliveredShipmentsComponent,
     CancelledShipmentsComponent,
-    ShipmentsComponent
+    ShipmentsComponent,
+    NewShipmentComponent
   ],
   imports: [
     CommonModule,

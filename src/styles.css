@@ -19,3 +19,22 @@ body {
 .custom-backdrop {
   background: #313131cc;
 }
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 0px !important;
+}
+
+.slide-in-right {
+  animation: slideInRight 400ms ease-out;
+}
+
+/* keyframes animations */
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
